@@ -2,8 +2,8 @@
 
 ## Solution for a challenge from [Devchallenges.io](http://devchallenges.io)
 
-- [Demo](http://devchallenges.io)
-- [Solution](http://devchallenges.io)
+- [Demo](https://agonizing-vest.surge.sh/)
+- [Solution](https://github.com/yhertekin/DevChallenges/tree/main/Responsive%20Web%20Developer/404%20Not%20Found)
 - [Challange](https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY)
 
 ## Table of Contents
@@ -15,8 +15,8 @@
 
 ## Overview
 
-![screenshot](/screenshots/desktop.png)
-![screenshot](/screenshots/mobile.png)
+![screenshot](./screenshots/desktop.png)
+![screenshot](./screenshots/mobile.png)
 
 ### Built With
 
