@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap");
+
+:root {
+	/* Colors */
+	--gray-1: #333333;
+	--gray-2: #4f4f4f;
+	--gray-3: #bdbdbd;
+	--white: #ffffff;
+
+	/* Font */
+	--font-family-space-mono: "Space Mono", monospace;
+	--font-family-inconsolata: "Inconsolata", monospace;
+	--font-weight-regular: 400;
+	--font-weight-bold: 700;
+	--font-size-lg: 48px;
+	--font-size-md: 18px;
+	--font-size-sm: 14px;
+
+	--line-height-lg: 71px;
+	--line-height-md: 27px;
+	--line-height-sm: 21px;
+	--letter-spacing: -0.035em;
+
+	--padding-sm: 24px;
+	--padding-md: 43px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: var(--font-family-space-mono);
+}
+
+.header {
+	font-family: var(--font-family-inconsolata);
+	font-weight: var(--font-weight-bold);
+	text-transform: uppercase;
+	padding: 1rem 0 0 2rem;
+	font-size: 24px;
+	margin-right: auto;
+}
+
+main {
+	padding: 1.3rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.scarecrow {
+	width: 286px;
+	margin: auto;
+}
+
+.content {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+
+	margin-top: 2.4rem;
+	margin-bottom: 6rem;
+}
+
+.content__header {
+	font-size: var(--font-size-lg);
+	line-height: var(--line-height-lg);
+	letter-spacing: var(--letter-spacing);
+	font-weight: var(--font-weight-bold);
+	color: var(--gray-1);
+}
+
+.content__text {
+	font-size: var(--font-size-md);
+	line-height: var(--line-height-md);
+	color: var(--gray-2);
+	margin: 2.4rem 0 3.8rem 0;
+}
+
+.content__button {
+	border: none;
+	outline: none;
+	font-size: var(--font-size-sm);
+	line-height: var(--line-height-sm);
+	color: var(--white);
+	background-color: var(--gray-1);
+	padding: var(--padding-sm) var(--padding-md);
+	text-transform: uppercase;
+}
+
+.footer__text {
+	text-align: center;
+	font-size: var(--font-size-sm);
+	color: var(--gray-3);
+	margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 900px) {
+	:root {
+		--font-size-lg: 64px;
+		--font-size-md: 24px;
+		--font-size-sm: 14px;
+
+		--line-height-sm: 21px;
+		--line-height-md: 36px;
+		--line-height-lg: 95px;
+	}
+	.header {
+		padding: 3rem 6rem;
+	}
+	main {
+		flex-direction: row;
+		place-items: center;
+		gap: 6rem;
+		padding: 6rem;
+		align-self: center;
+		margin-bottom: 10rem;
+	}
+	.scarecrow {
+		width: 540px;
+	}
+
+	.content {
+		margin: 0;
+	}
+
+	.content__text {
+		font-size: var(--font-size-md);
+		width: 382px;
+	}
+}
