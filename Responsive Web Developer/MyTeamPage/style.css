@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+:root {
+	/* Colors */
+
+	--gray: #a9a9a9;
+
+	/* Typography */
+	--font-family-montserrat: "Montserrat", sans-serif;
+	--font-family-poppins: "Poppins", sans-serif;
+	--font-family-ptserif: "PT Serif", serif;
+
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	--font-size-xs: 10px;
+	--font-size-sm: 14px;
+	--font-size-md: 18px;
+	--font-size-lg: 36px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1.header {
+	font-family: var(--font-family-ptserif);
+	font-size: var(--font-size-lg);
+	font-weight: var(--font-weight-bold);
+	letter-spacing: -0.045em;
+	margin-top: 71px;
+	padding: 0 12px;
+}
+.info {
+	padding: 0 12px;
+}
+.info > .info__header {
+	font-family: var(--font-family-poppins);
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-md);
+	text-transform: uppercase;
+	margin-top: 38px;
+}
+.info > .info__text {
+	font-family: var(--font-family-poppins);
+	font-weight: var(--font-weight-regular);
+	font-size: var(--font-size-sm);
+	margin-top: 10px;
+}
+
+.card__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	margin-top: 38px;
+}
+
+.card {
+	position: relative;
+	width: 156px;
+	margin-top: 10px;
+}
+.card:nth-of-type(2n) {
+	margin-top: 48px;
+}
+.card > .card__image {
+	width: 138.72px;
+}
+
+.card > h3.card__name {
+	font-family: var(--font-family-poppins);
+	font-weight: var(--font-weight-semibold);
+	font-size: var(--font-size-sm);
+	text-transform: capitalize;
+	line-height: 21px;
+	margin-top: 10px;
+}
+.card > h4.card__title {
+	transform: rotate(90deg);
+	transform-origin: top left;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	font-family: var(--font-family-ptserif);
+	font-weight: var(--font-weight-regular);
+	font-size: var(--font-size-xs);
+	text-transform: uppercase;
+	margin-left: 4.03px;
+	line-height: 13.25px;
+}
+footer {
+	text-align: center;
+	margin-top: 134px;
+	margin-bottom: 24px;
+	color: var(--gray);
+}
+
+footer > a {
+	color: var(--gray);
+	font-weight: var(--font-weight-bold);
+}
+
+@media only screen and (min-width: 800px) {
+	:root {
+		/* Typography */
+
+		--font-size-xs: 12px;
+		--font-size-sm: 18px;
+		--font-size-md: 18px;
+		--font-size-lg: 36px;
+	}
+	.card__container {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
