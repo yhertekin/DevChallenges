@@ -2,8 +2,8 @@
 
 ## Solution for a challenge from [Devchallenges.io](http://devchallenges.io)
 
-- [Demo]()
-- [Solution]()
+- [Demo](https://narrow-story.surge.sh/)
+- [Solution](https://github.com/yhertekin/DevChallenges/edit/main/Responsive%20Web%20Developer/MyTeamPage)
 - [Challange](https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U)
 
 ## Table of Contents
