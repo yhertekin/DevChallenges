@@ -2,9 +2,7 @@
 
 :root {
 	/* Colors */
-
 	--gray: #a9a9a9;
-
 	/* Typography */
 	--font-family-montserrat: "Montserrat", sans-serif;
 	--font-family-poppins: "Poppins", sans-serif;
@@ -27,48 +25,57 @@
 	box-sizing: border-box;
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+header {
+	padding: 1rem;
+}
+
 h1.header {
 	font-family: var(--font-family-ptserif);
 	font-size: var(--font-size-lg);
 	font-weight: var(--font-weight-bold);
 	letter-spacing: -0.045em;
-	margin-top: 71px;
-	padding: 0 12px;
+	margin-top: 3rem;
 }
-.info {
-	padding: 0 12px;
-}
+
 .info > .info__header {
 	font-family: var(--font-family-poppins);
 	font-weight: var(--font-weight-semibold);
 	font-size: var(--font-size-md);
 	text-transform: uppercase;
-	margin-top: 38px;
+	margin: 1rem 0;
 }
 .info > .info__text {
 	font-family: var(--font-family-poppins);
 	font-weight: var(--font-weight-regular);
 	font-size: var(--font-size-sm);
-	margin-top: 10px;
 }
 
 .card__container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	justify-items: center;
-	margin-top: 38px;
+	grid-template-columns: 45vw 45vw;
+
+	padding: 1rem;
+	align-self: center;
+	gap: 1rem;
 }
 
 .card {
 	position: relative;
-	width: 156px;
-	margin-top: 10px;
 }
 .card:nth-of-type(2n) {
-	margin-top: 48px;
+	margin-top: 3rem;
 }
+
 .card > .card__image {
-	width: 138.72px;
+	width: calc(100% - 1.2rem);
 }
 
 .card > h3.card__name {
@@ -90,13 +97,11 @@ h1.header {
 	font-weight: var(--font-weight-regular);
 	font-size: var(--font-size-xs);
 	text-transform: uppercase;
-	margin-left: 4.03px;
+
 	line-height: 13.25px;
 }
 footer {
-	text-align: center;
-	margin-top: 134px;
-	margin-bottom: 24px;
+	margin: 2rem auto;
 	color: var(--gray);
 }
 
@@ -108,13 +113,31 @@ footer > a {
 @media only screen and (min-width: 800px) {
 	:root {
 		/* Typography */
-
 		--font-size-xs: 12px;
 		--font-size-sm: 18px;
 		--font-size-md: 18px;
 		--font-size-lg: 36px;
 	}
+	header {
+		display: grid;
+		grid-template-columns: 30vw 30vw;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+	h1.header {
+		margin: 0;
+	}
+
 	.card__container {
-		grid-template-columns: 1fr 1fr 1fr;
+		display: inline-grid;
+		grid-template-columns: repeat(3, 20vw);
+		gap: 4rem;
+	}
+	.card:nth-of-type(2n) {
+		margin-top: 0rem;
+	}
+	.card:nth-of-type(2),
+	.card:nth-of-type(5) {
+		margin-top: 6rem;
 	}
 }
