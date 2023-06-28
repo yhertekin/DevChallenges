@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="/assets/devchallenges.png" type="image/x-icon" />
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+		<title>Interior Consultant</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__logo">This Interior</div>
+
+			<nav class="header__nav--desktop">
+				<ul class="header__nav__list">
+					<li class="header__nav__list__item active"><a href="#">Home</a></li>
+					<li class="header__nav__list__item"><a href="#">Collection</a></li>
+					<li class="header__nav__list__item"><a href="#">About</a></li>
+					<li class="header__nav__list__item"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+
+			<span class="header__btn--open material-symbols-outlined">menu</span>
+			<nav class="header__nav--mobile">
+				<span class="header__btn--close material-symbols-outlined">close</span>
+				<ul class="header__nav__list">
+					<li class="header__nav__list__item active"><a href="#">Home</a></li>
+					<li class="header__nav__list__item"><a href="#">Collection</a></li>
+					<li class="header__nav__list__item"><a href="#">About</a></li>
+					<li class="header__nav__list__item"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main">
+			<section class="main__info">
+				<h1 class="main__info__header">Modern interior</h1>
+				<p class="main__info__text">
+					A full-Service residential & commercial interior design and staging company
+					offering professional organizing & eco-services.
+				</p>
+				<a href="#" class="main__info__link">
+					<span>Read more</span>
+					<span class="material-symbols-outlined">arrow_right_alt</span>
+				</a>
+			</section>
+			<section class="main__design">
+				<img class="main__design__image" src="/assets/photo1.png" alt="house inside" />
+				<article class="main__design__card">
+					<img
+						class="main__design__card__image"
+						src="/assets/photo2.png"
+						alt="profile image"
+					/>
+					<div>
+						<p class="main__design__card__name">Aliza Webber</p>
+						<p class="main__design__card__title">Interior designer</p>
+					</div>
+					<p class="main__design__card__info">Designed in 2020 by<br />Aliza Webber</p>
+				</article>
+			</section>
+		</main>
+		<footer class="footer">
+			<p>
+				created by <a href="https://github.com/yhertekin">yhertekin</a> - devChallenges.io
+			</p>
+		</footer>
+	</body>
+
+	<script>
+		function findActiveLink(e) {
+			const links = document.querySelectorAll(".header__nav__list__item");
+			links.forEach((link) => {
+				link.addEventListener("click", () => {
+					links.forEach((l) => {
+						if (link.innerHTML !== l.innerHTML) {
+							l.classList.remove("active");
+						} else {
+							l.classList.add("active");
+						}
+					});
+				});
+			});
+		}
+
+		function toogleMobileMenu() {
+			const menuOpen = document.querySelector(".header__btn--open");
+			const menuClose = document.querySelector(".header__btn--close");
+			const headerNav = document.querySelector(".header__nav--mobile");
+
+			menuOpen.addEventListener("click", () => {
+				headerNav.classList.add("header__nav--open");
+			});
+			menuClose.addEventListener("click", () => {
+				headerNav.classList.remove("header__nav--open");
+			});
+		}
+
+		toogleMobileMenu();
+		findActiveLink();
+	</script>
+</html>
